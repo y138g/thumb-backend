@@ -19,7 +19,7 @@ public class Blog implements Serializable {
     /**
      * Id
      */
-    @TableId(type = IdType.ASSIGN_UUID)
+    @TableId(type = IdType.ASSIGN_ID)
     private Long id;
 
     /**

@@ -9,6 +9,15 @@ spring:
     url: jdbc:mysql://localhost:3306/thumb?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
     username: root
     password: Zjf1314520.
+  data:
+    # Redis 配置
+    redis:
+      database: 2
+      host: localhost
+      username: default
+      password: zhanan@2024
+      timeout: 5000
+      port: 6379
 knife4j:
   enable: true
   setting:
