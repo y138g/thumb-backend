@@ -12,26 +12,20 @@ import com.itgr.thumbbackend.model.dto.thumb.DoThumbRequest;
 import com.itgr.thumbbackend.model.empty.Thumb;
 import com.itgr.thumbbackend.model.enums.LuaStatusEnum;
 import com.itgr.thumbbackend.service.ThumbService;
-import com.itgr.thumbbackend.service.UserService;
 import com.itgr.thumbbackend.util.RedisKeyUtil;
 import jakarta.annotation.Resource;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.context.annotation.Primary;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 import java.util.Objects;
 
-@Service("ThumbService")
+@Service("ThumbServiceRedis")
 @Slf4j
 @RequiredArgsConstructor
-@Primary
 public class ThumbServiceRedisImpl extends ServiceImpl<ThumbMapper, Thumb> implements ThumbService {
-
-    @Resource
-    private UserService userService;
 
     @Resource
     private RedisTemplate<String, Object> redisTemplate;
