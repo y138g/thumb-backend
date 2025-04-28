@@ -18,6 +18,10 @@ spring:
       password: zhanan@2024
       timeout: 5000
       port: 6379
+  # pulsar
+  pulsar:
+    client:
+      service-url: pulsar://localhost:6650
 knife4j:
   enable: true
   setting:
@@ -44,3 +48,7 @@ sa-token:
   token-style: uuid
   # 是否输出操作日志
   is-log: true
+
+server:
+  address: 0.0.0.0
+  port: 8081
